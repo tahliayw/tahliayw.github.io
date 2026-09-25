@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tahlia Wu's Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Tahlia Wu</a>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <div class="dropdown">
+        <a href="#projects" class="dropbtn">Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="robot.html">FlowBot</a>
+          <a href="machining.html">Stirling Engine</a>
+          <a href="shelf.html">Floating Shelf</a>
+          <a href="lightbox.html">Light Box</a>
+        </div>
+      </div>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div>
+      <!-- REPLACE: name + tagline + intro -->
+      <h1>Tahlia Wu</h1>
+      <p class="intro">Mechanical Engineering & Robotics @ UPenn — Class of 2028</p>
+      <p class="tagline"><span style="color: #2baac0">Skilled in both software and hardware</span>, <br> I specialize in robotic systems integration, experimental fluid dynamics, and automating data analysis.</p>
+    </div>
+
+    <div class="headshot-frame">
+      <img src="images/headshot.jpg" alt="Portrait of Tahlia Wu">
+    </div>
+  </section>
+
+  <section class="section-head">
+    <h2>Engineering Projects</h2>
+  </section>
+
+  <!-- SPOTLIGHT PROJECT — your flagship. Swap which project sits here if your focus changes. -->
+  <a class="spec-card spotlight-card" href="robot.html">
+    <div class="card-media">
+      <video autoplay muted loop playsinline poster="images/flowbot-only-cover.png">
+        <source src="videos/flowbot-only.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="spec-card-body">
+      <span class="fig-label">Robotics [Software & Hardware]</span>
+      <h3>FlowBot: Automated 3D Traverse Robot</h3>
+      <p>An automated 3D robotic traverse powered by a mecanum chassis and a custom vertical linear actuator, utilizing OptiTrack closed-loop feedback to position an anemometer and streamline wind tunnel experiments.</p>
+      <ul class="tag-list">
+        <li>PID Control</li>
+        <li>OptiTrack</li>
+        <li>Raspberry Pi</li>
+        <li>LabVIEW</li>
+      </ul>
+      <span class="card-cta">Read More</span>
+    </div>
+  </a>
+
+  <!-- SMALLER PROJECTS -->
+  <section class="small-grid">
+    <a class="spec-card" href="machining.html">
+      <div class="card-media">
+        <img src="images/engine-diag.png" alt="Finished Stirling engine">
+      </div>
+      <div class="spec-card-body">
+        <span class="fig-label">Machining</span>
+        <h3>Kirby Stirling Engine</h3>
+        <p>Built engine with 17 self-machined parts from aluminum, steel, brass, and acrylic stock.</p>
+        <ul class="tag-list">
+          <li>CNC / Mastercam</li>
+          <li>Lathe</li>
+          <li>2.5-Axis Bed Mill</li>
+          <li>SolidWorks / CAD</li>
+          <li>GD&T</li>
+        </ul>
+        <span class="card-cta">Read More</span>
+      </div>
+    </a>
+
+    <a class="spec-card" href="shelf.html">
+      <div class="card-media">
+        <img src="images/floating shelf.jpg" alt="Laser-cut floating shelf"></div>
+      </div>
+      <div class="spec-card-body">
+        <span class="fig-label">Product Design</span>
+        <h3>Floating Shelf</h3>
+        <p>A laser-cut floating shelf, designed from scratch in CAD to look simultaneously low-profile and aesthetic.</p>
+        <ul class="tag-list">
+          <li>Laser Cutting</li>
+          <li>SolidWorks / CAD</li>
+        </ul>
+        <span class="card-cta">Read More</span>
+      </div>
+    </a>
+
+    <a class="spec-card" href="lightbox.html">
+      <div class="card-media">
+        <img src="images/lightbox.png" alt="Laser-cut lightbox that doubles as figurine shelf."></div>
+      </div>
+      <div class="spec-card-body">
+        <span class="fig-label">Product Design</span>
+        <h3>Light Box Figurine Shelf</h3>
+        <p>A laser-cut display shelf designed from scratch in CAD to showcase figurines while doubling as a light box.</p>
+        <ul class="tag-list">
+          <li>Laser Cutting</li>
+          <li>SolidWorks / CAD</li>
+          <li>Joint Design</li>
+        </ul>
+        <span class="card-cta">Read More</span>
+      </div>
+    </a>
+
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Get in Touch</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="label">Resume</span>
+        <a href="resume.pdf">Download resume (PDF)</a>
+      </li>
+      <li>
+        <span class="label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/tahlia-wu-508aa8326/" target="_blank" rel="noopener">linkedin.com/in/tahlia-wu-508aa8326</a>
+      </li>
+      <li>
+        <span class="label">Email</span>
+        <a href="mailto:tahlia@engineering.upenn.edu">tahlia@engineering.upenn.edu</a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>&copy; 2026 Tahlia Wu. Built from scratch, hosted on GitHub Pages.</footer>
+
+</body>
+</html>

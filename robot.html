@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowBot - Tahlia Wu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Tahlia Wu</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="index.html#projects" class="dropbtn" aria-current="page">Projects ▾</a>
+        <div class="dropdown-content">
+          <a href="robot.html">FlowBot</a>
+          <a href="machining.html">Stirling Engine</a>
+          <a href="shelf.html">Floating Shelf</a>
+          <a href="lightbox.html">Light Box</a>
+        </div>
+      </div>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- FULL-WIDTH TITLE -->
+  <section class="project-head">
+    <span class="tag">Robotics [Software & Hardware]</span>
+    <h1>FlowBot: Automated 3D Traverse Robot</h1>
+    <ul class="tag-list">
+      <li>PID Control</li>
+      <li>OptiTrack (Motion Capture)</li>
+      <li>Raspberry Pi</li>
+      <li>LabVIEW</li>
+      <li>DC Motors</li>
+      <li>System Integration</li>
+    </ul>
+  </section>
+
+  <div class="project-layout">
+    <div class="project-text">
+      <section class="brief">
+
+        <div class="brief-block">
+          <h2><span class="step-index">01</span> The problem</h2>
+          <ul>
+            <li>Measuring the wake of a lab-scale wind turbine using hot-wire anemometry requires <strong>sub-centimeter accuracy</strong> and hundres of points.</li>
+            <li>Manual positioning is too labor intensive and prone to error.</li>
+          </ul>
+        </div>
+
+        <div class="brief-block">
+          <h2><span class="step-index">02</span> My approach</h2>
+          <ul>
+            <li>Engineer a robot to autmoate sensor movement through a programmed points path in 3D.</li>
+            <li>Robot must <strong>self-correct for yaw misalignment</strong> to ensure accurate sensor readings.</li>
+            <li>Robot needs to be stable while experiencing <strong>10m/s winds in the wind tunnel</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="brief-block">
+          <h2><span class="step-index">03</span> Process</h2>
+
+          <h3>Hardware</h3>
+          <ul>
+            <li>Built a <strong>mecanum chassis</strong> base for XY movement.</li>
+            <li>Designed a custom <strong>vertical linear actuator</strong> from a <strong>stepper motor, string, and pulley</strong>. It is lightweight and cost <strong>under $200</strong>.</li>
+            <li>Constructed the frame mainly from <strong>80/20 aluminum extrusions</strong>.</li>
+            <li>Designed and <strong>3D-printed custom components</strong> in CAD to mount the stepper motor and integrate the actuator into the frame.</li>
+          </ul>
+
+          <h3>Software &amp; Controls</h3>
+          <ul>
+            <li>Programmed movement for the mecanum base and linear actuator in <strong>Python</strong> on a <strong>Raspberry Pi</strong>.</li>
+            <li>Used <strong>NatNet</strong> to wirelessly stream position data from the <strong>OptiTrack</strong> motion capture system.</li>
+            <li>Implemented a <strong>PID control loop</strong> to drive the robot to target positions using OptiTrack feedback.</li>
+            <li>Integrated the Pi with <strong>LabVIEW</strong> so the traverse could plug into the larger wind turbine wake experiment.</li>
+            <li>Diagnosed and debugged a <strong>data buffer overflow</strong> caused by connecting the Pi to LabVIEW and OptiTrack at the same time.</li>
+          </ul>
+
+          <h3>Safety</h3>
+          <ul>
+            <li>Built <strong>two independent emergency-stop layers</strong>: one on the Raspberry Pi and one in LabVIEW.</li>
+          </ul>
+        </div>
+
+        <div class="brief-block">
+          <h2><span class="step-index">04</span> Results</h2>
+          <ul>
+            <li>Achieved <strong>6mm precision and 1mm accuracy</strong>.</li>
+            <li>Automated 30+ hours of wind tunnel experiments.</li>
+            <li>Presenting research from this data at APS Division of Fluid Dynamics conference in Nov 2026.</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="project-media">
+      <!-- VIDEO 3 -->
+      <figure>
+        
+        <video autoplay loop muted playsinline controls poster="images/flowbot-vertical-cover.png">
+          <source src="videos/flowbot-vertical.mp4" type="video/mp4">
+        </video>
+      
+        <figcaption style="text-align: center;">Demonstration of vertical linear actuator capabilities + stability.</figcaption>
+
+      </figure>
+
+      <!-- VIDEO 1 -->
+      <figure>
+        <video autoplay loop muted playsinline controls poster="images/flowbot-front-te-cover.png">
+          <source src="videos/flowbot-front-te.mp4" type="video/mp4">
+        </video>
+      </figure>
+
+      <!-- VIDEO 2 -->
+      <figure>
+        <video autoplay loop muted playsinline controls poster="images/flowbot-back-te-cover.png">
+          <source src="videos/flowbot-back-te.mp4" type="video/mp4">
+        </video>
+      
+        <figcaption style="text-align: center;">FlowBot deployed in a surging + dynamic induction controlled turbine wake experiment.</figcaption>
+
+      </figure>
+
+      <!-- PHOTO -->
+      <figure>
+        <div class="media-placeholder">
+          <img src="images/flowbot.png" alt="Image of FlowBot: a robotic traverse" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+        </div>
+        <figcaption style="text-align: center;">Flowbot image with 5ft vertical linear actuator setting.</figcaption>
+      </figure>
+
+    </div>
+
+  </div>
+  <a class="back-link" href="index.html">&larr; Back to home</a>
+</main>
+
+<footer>&copy; 2026 Tahlia Wu. Built from scratch, hosted on GitHub Pages.</footer>
+
+</body>
+</html>
