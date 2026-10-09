@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Floating Shelf — Tahlia Wu</title>
+<title>Computational Air Pollution Modeling — Tahlia Wu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -32,47 +32,52 @@
 
 <main>
 
+  <!-- FULL-WIDTH TITLE -->
   <section class="project-head">
-    <span class="tag">Product Design</span>
-    <h1>Floating Shelf</h1>
+    <span class="tag">Data Analysis</span>
+    <h1>Computational Air Pollution Model</h1>
     <ul class="tag-list">
-      <li>Laser Cutting</li>
-      <li>CAD</li>
-      <li>Joinery</li>
+      <li>R</li>
+      <li>EPA MOVES/R-LINE</li>
+      <li>Software Automation</li>
     </ul>
   </section>
 
   <div class="project-layout">
-
-    <!-- LEFT COLUMN: all writing -->
     <div class="project-text">
-
       <section class="brief">
         <div class="brief-block">
           <h2><span class="step-index">01</span> Problem</h2>
-          <p>I had a bunch of figurines that I wanted to clear off my desk, but still display in my room. I wanted the shelf to be low-profile so that the focus was on my figurines.</p>
+          <ul>
+            <li>High-spatial-resolution vehicular emissions data is vital for formulating strategies to mitigate adverse health effects from air pollution.</li>
+            <li>MOVES and R-LINE are high-resolution computational models.</li>
+            <li>However, running these established models for the thousands of roads in a city is <strong>extremely computationally expensive and slow</strong>.</li>
+          </ul>
         </div>
 
         <div class="brief-block">
-          <h2><span class="step-index">02</span> How I made it</h2>
-          <p>I designed the shelf in SolidWorks using organic splines and T-slot joints. Then I laser cut 0.25" clear acrylic in the Rapid Prototyping Lab at UPenn.</p>
+          <h2><span class="step-index">02</span> My approach</h2>
+          <ul>
+            <li>Create a dictionary of unit characteristic roads to minimize reruns of these large computational models.</li>
+            <li>Develop road bins based on season, time of day, and traffic volume.</li>
+            <li>Formulate a superposition algorithm on a 50m unit road to enable road length flexibility without reruns.</li>
+          </ul>
+        </div>
+
+        <div class="brief-block">
+          <h2><span class="step-index">03</span> Results/Case Study: Whitehall, OH</h2>
+          <p>To demonstrate my model's performance, I applied the pipeline to a road network of 36 roads with varying traffic volumes and lengths.</p>
         </div>
 
       </section>
 
     </div>
 
-    <!-- RIGHT COLUMN: 4 photos, 2 per row -->
     <div class="project-media">
       <div class="media-grid">
         <figure>
-          <div class="media-placeholder"><img src="images/floating shelf-render.jpg.jpg" alt="Render of CAD assembly using SolidWorks Visualize."></div>
-          <figcaption>Render of CAD assembly using SolidWorks Visualize.</figcaption>
-        </figure>
-
-        <figure>
-          <div class="media-placeholder"><img src="images/floating shelf.jpg" alt="Finished floating shelf mounted on the wall holding many figurines."></div>
-          <figcaption>The finished shelf on my wall holding my many figurines.</figcaption>
+          <div class="media-placeholder"><img src="images/air-pollutant-map.png" alt="Heatmap of roadside pollution for the Whitehall, OH case study."></div>
+          <figcaption>Heatmap of roadside PM2.5 pollution from vehicular emissions in a Whitehall, OH neighborhood using my computational model.</figcaption>
         </figure>
 
       </div>
